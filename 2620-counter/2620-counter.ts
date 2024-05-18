@@ -1,15 +1,10 @@
-/**
- * @param {number} n
- * @return {Function} counter
- */
-var createCounter = function(n) {
+function createCounter(n: number): () => number {
     
   return function() {
-      res = n
-      n+=1
-      return res
-  };
-};
+      return n++
+  }
+}
+
 
 /** 
 * const counter = createCounter(10)
@@ -18,4 +13,4 @@ var createCounter = function(n) {
 * counter() // 12
 */
 
-// Runtime: 48 ms (71.41%), Memory: 48.96 MB (26.05%)
+// Runtime: 52 ms (76.86%), Memory: 50.82 MB (90.35%)
